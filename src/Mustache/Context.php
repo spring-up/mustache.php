@@ -60,6 +60,16 @@ class Mustache_Context
     }
 
     /**
+     * Return the last Context frame from the stack.
+     *
+     * @return mixed Last Context frame (object or array)
+     */
+    public function popShow()
+    {
+        return $this->stack[0];
+    }
+
+    /**
      * Pop the last block Context frame from the stack.
      *
      * @return mixed Last block Context frame (object or array)
